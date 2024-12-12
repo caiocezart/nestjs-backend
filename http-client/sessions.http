@@ -1,0 +1,11 @@
+@baseUrl = http://localhost:3000
+@apiRoute = sessions
+
+### @name authenticate
+POST {{baseUrl}}/{{apiRoute}}
+Content-Type: application/json
+
+{
+  "email": "caio2@caio.com",
+  "password": "caiocaio"
+}

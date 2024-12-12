@@ -1,0 +1,17 @@
+@baseUrl = http://localhost:3000
+@apiRoute = accounts
+
+### @name get all users
+GET {{baseUrl}}/{{apiRoute}}
+
+### @name create_account
+POST {{baseUrl}}/{{apiRoute}}
+Content-Type: application/json
+
+{
+  "name": "Caio Trevisan",
+  "email": "caio2@caio.com",
+  "password": "caiocaio"
+}
+
+###

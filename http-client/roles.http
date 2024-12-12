@@ -1,0 +1,26 @@
+@baseUrl = http://localhost:3000
+
+### @name authenticate
+POST {{baseUrl}}/sessions
+Content-Type: application/json
+
+{
+  "email": "caio@caio.com",
+  "password": "caiocaio"
+}
+
+> {% client.global.set("accessToken", response.body.access_token); %}
+
+### Get all
+GET http://localhost:3000/roles?page=1
+Content-Type: application/json
+Authorization: Bearer {{accessToken}}
+
+### Create new role
+POST http://localhost:3000/roles
+Content-Type: application/json
+Authorization: Bearer {{accessToken}}
+
+{
+  "name": "Staff"
+}
